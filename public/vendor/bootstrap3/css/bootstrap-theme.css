@@ -271,9 +271,9 @@
   border-color: #b2dba1;
 }
 .alert-info {
-  background-image: -webkit-linear-gradient(top, #f3e898 0%, #efe076 100%);
-  background-image: -o-linear-gradient(top, #f3e898 0%, #efe076 100%);
-  background-image: linear-gradient(to bottom, #f3e898 0%, #efe076 100%);
+  background-image: -webkit-linear-gradient(top, #f3e898 0%, #efe076 80%);
+  background-image: -o-linear-gradient(top, #f3e898 0%, #efe076 80%);
+  background-image: linear-gradient(to bottom, #f3e898 0%, #efe076 80%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff3e898', endColorstr='#ffefe076', GradientType=0);
   border-color: #ebd953;

@@ -5,9 +5,9 @@ var isDeleted = require("./is-deleted");
 require("./identify-user");
 require("./enable-link-clicking");
 if (!isDeleted) {
-    require("./focus-contenteditable");
+    //require("./focus-contenteditable");
     require("./paste-media")(document.getElementById("content"));
-    require("./ckeditor-initialize")(CKEDITOR);
+    require("./ckeditor-initialize")();
     require("./upload-attachments");
     require("./upload-images");
     require("./delete-image");

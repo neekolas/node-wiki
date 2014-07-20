@@ -5,10 +5,18 @@ var __ = require("./translate");
 var modal = require("./modal");
 var message = require("./message");
 
-module.exports = function (CKEDITOR) {
-    require("./ckeditor-wiki-links")(CKEDITOR);
+module.exports = function () {
     //initize CK editor and page save events
+    //var mediumEditor = require("./medium-editor");
+    //
     if ($(".content.editable").length == 0) return;
+    var editor = new MediumEditor('.content.editable',{
+        buttons: ['highlight', 'bold', 'italic', 'underline', 'anchor', 'header1', 'header2', 'orderedlist', 'unorderedlist'],
+        buttonLabels: 'fontawesome',
+        disableReturn: false,
+        placeholder: 'This page is boring. Add some text.',
+        targetBlank: true
+    });
     var getData = function () {
         return {
             content: $('.content.editable')
@@ -37,16 +45,12 @@ module.exports = function (CKEDITOR) {
                 .error(savingError);
         }
     };
-
     setInterval(save, 6e4);
     $("body")
         .bind("save", save);
 
-    CKEDITOR.inline("content", {
-            on: {
-                blur: save
-            }
-        });
+    $(".editable")
+        .blur(save)
 
     $(".edit")
         .blur(save)

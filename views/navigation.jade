@@ -25,6 +25,7 @@ mixin navigation
 						= __("tasks")
 						b.caret
 					ul.dropdown-menu
+						li: a#new-page(href="#")= __("add-page")
 						if (!page.deleted)
 							li: a#move-page(href="#")= __("move-page")
 						if (page.deleted)

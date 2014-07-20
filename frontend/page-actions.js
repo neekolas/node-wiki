@@ -46,6 +46,28 @@ var modal = require("./modal");
 }(jQuery));
 
 (function ($) {
+    $("#new-page").click(function (e) {
+        e.preventDefault();
+        var changePage = function (e) {
+            e.preventDefault();
+            var destination = $("#control-page").val().replace(/\ /g,'-').toLowerCase();
+            window.location = '/' + destination;
+        };
+
+        modal({
+                title: __("new-page"),
+                fields: [{
+                        label: 'Name',
+                        name: "page",
+                        placeholder: "Survival Guide",
+                        required: true
+                    }
+                ]
+            }).on("submit", changePage);
+    });
+}(jQuery));
+
+(function ($) {
     $("#delete-page").click(function (e) {
         e.preventDefault();
         $.ajax({

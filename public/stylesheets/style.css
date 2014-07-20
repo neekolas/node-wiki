@@ -1,7 +1,7 @@
 body {
     font-family: 'Josefin Slab', 'Helvetica Neue', 'Helvetica', 'Sans Serif';
     font-weight: 300;
-    font-size: 17px;
+    font-size: 18px;
     background-image: url('/images/sandpaper.png'); 
     background-color: #f8f7ed;
     color: #523A53;
@@ -18,12 +18,49 @@ a:hover {
     color: #9F29A7;
 }
 
+th {
+    text-transform: capitalize;
+}
+
 iframe {
     border: none;
     padding: 0;
     margin: 0;
 }
 
+.alert {
+    padding: 10px;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.97);
+    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.navbar-nav > li > .dropdown-menu a:hover {
+    color: #9F29A7;
+}
+
+.alert-info {
+  background-color: #e3e096;
+  border-color: transparent;
+  color: #fff;
+  opacity: 70%;
+  margin-bottom: 10px;
+  z-index: 1000000;
+}
+.medium-editor-placeholder:after {
+    color: #333;
+}
+#content img {
+    max-width: 100%;
+}
+
+#content a {
+    cursor: pointer;
+    color: #785B7A;
+}
 .container.deleted {
     background: #fbfbfb;
 }
@@ -109,7 +146,6 @@ iframe {
 
 .content {
     min-height: 250px;
-    font-size: 1.2em;
 }
 
 .content:before{

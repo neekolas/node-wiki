@@ -57,7 +57,7 @@ module.exports = function (el) {
             injectMedia(data.dataURL, '#content')
         })
         .on('pasteText', function(ev, data){
-            pasteHtmlAtCaret(data.text, false)
+            pasteHtmlAtCaret(data.text, false);
             injectMedia(data.text, '#content')
         });
     $(el).on('paste', function(ev){

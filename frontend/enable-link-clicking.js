@@ -4,11 +4,7 @@
 var clickingLink = false;
 
 var openLink = function (el, e) {
-    if (e.ctrlKey ||  e.metaKey ||  e.button === 1) {
-        window.open(el.href);
-    } else {
-        location.href = el.href;
-    }
+    window.open(el.href);
 };
 
 var content = document.querySelector(".content.editable");

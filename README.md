@@ -1,8 +1,8 @@
-#Node Wiki
+#Uhuru Wiki
 
-[![Build Status](https://travis-ci.org/thomaspeklak/node-wiki.png)](https://travis-ci.org/thomaspeklak/node-wiki) [![Dependency Status](https://gemnasium.com/thomaspeklak/node-wiki.png)](https://gemnasium.com/thomaspeklak/node-wiki)
+This is a fork of Thomas Peklak's Node Wiki. Largely just a redesign to simplify things. I probably ripped out half of the UI, and I don't feel like there were any substantial losses in functionality. I did make some changes to the file upload, trying to move towards a more unified model where all files are treated the same regardless of how they were added. It's 80% of the way there, but currently doesn't support uploads of non-media files.
 
-This was formally a proof of concept of easily combing Aloha editor with a node backend to achieve a simple wiki. This project has now started to evolve into a decent wiki platform with tags, recent pages, autosaving and drag and drop file uploads.
+The rest of the docs below are his.
 
 ##Simplicity
 
@@ -12,7 +12,7 @@ Contrary to other wikis you simply type an URL and if the page does not exist, e
 
 ##Installation
 
-    git clone git@github.com:thomaspeklak/node-wiki.git
+    git clone git@github.com:neekolas/node-wiki.git
     cd node-wiki
     npm install
     ./dev
@@ -21,7 +21,7 @@ Then simply open http://localhost:3000 and edit the page. Or go to another url (
 
 ###Configuration
 
-To configure NodeWiki to your needs you can create a `production.js` in the config folder and start it with `NODE_ENV=production node app.js`
+To configure NodeWiki to your needs you can create a `production.js` in the config folder and start it with `NODE_ENV=production node app.js.
 
 ####Options
 
@@ -46,13 +46,6 @@ Currently NodeWiki supports English and German out of the box. If you want a new
 ##Usage
 
 see [Documentation](./help/en.md)
-
-##NodeWiki Versioning
-
-As of version 0.2 Node Wiki follows the same versioning concept as NodeJs. Odd
-numbers represent unstable versions, even numbers represent stable versions.
-The master branch represents the latest unstable version. As of this writing
-0.2 is stable and 0.3 is unstable.
 
 ##Contributing
 

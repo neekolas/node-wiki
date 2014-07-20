@@ -75,5 +75,5 @@
 	"no-versions-yet": "No versions yet",
 	"help": "Help",
 	"pages": "Pages",
-	"more": "more"
+	"more": "More"
 }

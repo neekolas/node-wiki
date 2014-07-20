@@ -3,13 +3,6 @@ extends layout-page
 block content
     h1.title.edit(contenteditable=!page.deleted, data-last-modified=page.lastModified && page.lastModified.getTime())= page.title
 
-    div.tags
-        h2.label.label-success
-            i.icon-tags
-            | &nbsp;
-            = __("tags")
-        div.edit(contenteditable=!page.deleted)= page.tags.join(", ")
-
     #content.content.editable(contenteditable=!page.deleted)
         != page.content
 
@@ -18,7 +11,6 @@ block content
             strong= page.modifiedBy
 
 block pagemeta
-    mixin attachments(page.attachments)
     mixin fileDropper
+    mixin attachments(page.attachments)
     mixin images(page.images)
-    mixin versionLink(page)

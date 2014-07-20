@@ -14,5 +14,5 @@ block main
                     td= version.lastModified
     else
         h1= __("no-versions-yet")
-
-    a.btn.btn-primary(href="#{page.path}")= __("back-to-page")
+    .btn
+        a.btn-default.btn-primary(href="#{page.path}")= __("back-to-page")

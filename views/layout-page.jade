@@ -5,12 +5,12 @@ block main
     if page && page.deleted
         .alert.alert-warning= __("page-status-deleted")
     .row
-        .span3
+        .col-md-2
             block navigation
                 mixin renderNavigation(navigation)
             block pagemeta
 
-        .span9
+        .col-md-10
             -if (breadcrumbs.length)
                 ul.breadcrumb
                     each breadcrumb in breadcrumbs

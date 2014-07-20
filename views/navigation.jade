@@ -1,42 +1,33 @@
 mixin navigation
-    .navbar.navbar-static-top.navbar-inverse
-        .navbar-header
-            a.navbar-brand(href="/")= siteName
-        ul.nav.navbar-nav
-            li.dropdown
-                a.dropdown-toggle(href="#", data-toggle="dropdown")
-                    = __("pages")
-                    b.caret
-                ul.dropdown-menu
-                    li: a(href="/pages")= __("all-pages")
-                    li: a(href="/versions")= __("version-history")
-                    li: a(href="/deleted-pages")= __("deleted-pages")
-            li.dropdown
-                a.dropdown-toggle(href="#", data-toggle="dropdown")
-                    = __("changes")
-                    b.caret
+	.navbar.navbar-static-top
+		.navbar-header
+			a.navbar-brand(href="/")= siteName
+		ul.nav.navbar-nav
+			li.dropdown
+				a.dropdown-toggle(href="#", data-toggle="dropdown")
+					= __("pages")
+					b.caret
 
-                ul.dropdown-menu
+				ul.dropdown-menu
 
-                    li.nav-header= __("latest-pages")
-                    each page in latest
-                        li
-                            a(href=page.path)= page.title
+					li.dropdown-header= __("recent-changes")
+					each page in recentChanges
+						li
+							a(href=page.path)= page.title
+					li.dropdown-header= __("more")
+					li: a(href="/pages")= __("all-pages")
+					li: a(href="/versions")= __("version-history")
+					li: a(href="/deleted-pages")= __("deleted-pages")
 
-                    li.nav-header= __("recent-changes")
-                    each page in recentChanges
-                        li
-                            a(href=page.path)= page.title
-
-            if (page)
-                li.dropdown
-                    a.dropdown-toggle(href="#", data-toggle="dropdown")
-                        = __("tasks")
-                        b.caret
-                    ul.dropdown-menu
-                        if (!page.deleted)
-                            li: a#move-page(href="#")= __("move-page")
-                        if (page.deleted)
-                            li: a#restore-page(href="#")= __("restore-page")
-                        else
-                            li: a#delete-page(href="#")= __("delete-page")
+			if (page)
+				li.dropdown
+					a.dropdown-toggle(href="#", data-toggle="dropdown")
+						= __("tasks")
+						b.caret
+					ul.dropdown-menu
+						if (!page.deleted)
+							li: a#move-page(href="#")= __("move-page")
+						if (page.deleted)
+							li: a#restore-page(href="#")= __("restore-page")
+						else
+							li: a#delete-page(href="#")= __("delete-page")

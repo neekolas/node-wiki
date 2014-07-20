@@ -17,3 +17,4 @@ require("./cover-image-loader");
 require("./language-switcher");
 require("./page-actions");
 require("./resize-iframe");
+require("./paste");

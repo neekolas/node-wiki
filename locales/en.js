@@ -15,7 +15,7 @@
 	"search": "Search",
 	"sub-pages": "Child pages",
 	"attachments": "Attachments",
-"drop-files-here": "Drop files",
+	"drop-files-here": "Drop files",
 	"images": "Images",
 	"drop-images-and-other-media": "",
 	"versions": "Versions",
@@ -73,5 +73,6 @@
 	"page-status-deleted": "This page is deleted. To restore it click restore from the tasks menu.",
 	"no-versions-yet": "No versions yet",
 	"help": "Help",
-	"pages": "Pages"
+	"pages": "Pages",
+	"more": "more"
 }

@@ -10,6 +10,7 @@ if ($("#content.editable").length == 0) return;
 
 $(function () {
     if (!(window.File && window.FileReader && window.FileList && window.Blob)) {
+        console.log('Drop zone hidden')
         return $(".drop-here").hide();
     }
 
@@ -28,6 +29,7 @@ function handleDrop(evt) {
 
     var uri = evt.dataTransfer.getData("text/uri-list");
     if (uri && !uri.match('^file:\/\//')) {
+        console.log('File detected')
         return injectMedia(uri, evt.target);
     }
 

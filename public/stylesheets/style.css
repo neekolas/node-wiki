@@ -4,11 +4,18 @@ body {
     font-size: 17px;
     background-image: url('/images/sandpaper.png'); 
     background-color: #f8f7ed;
-    color: #333;
+    color: #523A53;
 }
 
 a {
-    color: #384;
+    color: #785B7A;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -ms-transition: color 0.3s;
+    transition: color 0.3s;
+}
+a:hover {
+    color: #9F29A7;
 }
 
 iframe {
@@ -27,7 +34,7 @@ iframe {
 
 .tags {
     margin: 1em 0;
-    color: darkgreen;
+    color: #523A53;
     position:relative;
 }
 .tags h2 {
@@ -50,12 +57,12 @@ iframe {
 }
 
 .drop-here {
-    border: 3px dashed #555;
+    border: 3px dashed #523A53;
     margin-top: 2em;
     margin-bottom: 2em;
     padding: 25px;
     font-weight: bold;
-    color: #4a4a4a;
+    color: #523A53;
     text-align: center;
     text-transform: uppercase;
 }
@@ -65,7 +72,7 @@ iframe {
 }
 .messages {
     position: fixed;
-    top: 0;
+    top: 50px;
     left: 50%;
     margin-left: -25%;
     width: 50%;
@@ -127,13 +134,16 @@ iframe {
     padding-left: 5px;
 }
 
+.navbar-nav > li > a {
+    margin-bottom: 5px;
+}
 .modified-by{
-    color:#bdbdbd;
+    color: #523A53;
     text-align:right;
 }
 
 .modified-by strong{
-    color: #666;
+    color: #523A53;
     padding-left: 5px;
 }
 

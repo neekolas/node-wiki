@@ -20,7 +20,7 @@ mixin fileDropper
         #drop-zone.drop-here= __("drop-files-here")
 
 mixin images(files)
-    if files.length > 0
+    if files.length > -1
         h3= __("images")
         ul#images.images.plain-list
             for file in files
@@ -31,8 +31,7 @@ mixin images(files)
                     a.icon-remove-sign
 
 mixin versionLink(page)
-    h3= __("versions")
-    a(href="/versions/#{page._id}")= __("show-versions")
+    a(href="/versions/#{page._id}")= __("last-modified-by")
 
 mixin languageSwitcher
     if locales.length > 1

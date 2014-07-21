@@ -46,8 +46,6 @@ Page.pre("save", function (next) {
 
     this.title = this.title.replace("\n", "").replace("\r", "").replace(/(<([^>]+)>)/ig, "");
 
-    this.lastModified = (new Date()).toUTCString();
-
     next();
 });
 

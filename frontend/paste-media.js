@@ -1,7 +1,7 @@
 "use strict"
 
 var injectMedia = require("./inject-media");
-var paste = require("./Paste");
+var paste = require("./paste");
 
 function pasteHtmlAtCaret(html, selectPastedContent) {
     var sel, range;

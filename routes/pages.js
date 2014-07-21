@@ -1,3 +1,4 @@
+/*jslint node: true */
 "use strict";
 
 var Page = require("../models/page");
@@ -16,7 +17,7 @@ var setPage = function (req, res) {
         page = new Page(req.body);
         page.path = req.path;
     }
-
+    page.modified = page.lastModified || new Date();
     page.modifiedBy = req.cookies.username || "";
     return page;
 };
@@ -43,11 +44,14 @@ var getImage = function (page) {
 
 module.exports = function (app) {
     app.get("/pages", function (req, res) {
-        Page.all(function (err, pages) {
-            if (err) {
-                console.error(err);
-                res.send(500);
-            }
+        Page
+            .find()
+            .sort("path")
+            .exec(function (err, pages) {
+                if (err) {
+                    console.error(err);
+                    res.send(500);
+                }
 
             return res.render("pages", {
                 title: "All Pages",
@@ -116,6 +120,7 @@ module.exports = function (app) {
         }
 
         var page = setPage(req, res);
+        page.lastModified = new Date();
 
         page.save(function (err) {
             if (err)  {

@@ -1,12 +1,13 @@
-"use strict";
+/*jslint node: true */
+'use strict';
 
-var Page = require("../models/page");
-var parse = require("url").parse;
-var moveFiles = require("../lib/move-files");
-var supportedMediaTypes = require("../config").supportedMediaTypes;
-var fs = require("fs");
-var path = require("path");
-var request = require("request");
+var Page = require('../models/page');
+var parse = require('url').parse;
+var moveFiles = require('../lib/move-files');
+var supportedMediaTypes = require('../config').supportedMediaTypes;
+var fs = require('fs');
+var path = require('path');
+var request = require('request');
 
 
 var loadPage = function (req, res, next) {
@@ -31,7 +32,8 @@ var loadPage = function (req, res, next) {
 
 module.exports = function (app) {
 
-    app.post("/attachments", loadPage, function (req, res) {
+    app.post('/attachments', loadPage, function (req, res) {
+        res.setTimeout(0);
         if(!req.files.attachments) { return res.send(400); }
         var files = req.files.attachments[0] ? req.files.attachments : [req.files.attachments];
 
@@ -44,8 +46,7 @@ module.exports = function (app) {
         }
 
         var page = req.page;
-
-        moveFiles(page, files, "attachments", function (err, attachments) {
+        moveFiles(page, files, 'attachments', function (err, attachments) {
             if (err) {
                 console.error(err);
                 return res.send(400);
@@ -53,6 +54,7 @@ module.exports = function (app) {
 
             page.attachments = page.attachments.concat(attachments);
             page.save(function (err) {
+                console.log(page);
                 if (err) { return res.send(500); }
 
                 res.send({
@@ -64,7 +66,8 @@ module.exports = function (app) {
         });
     });
 
-    app.post("/images", loadPage, function (req, res) {
+    app.post('/images', loadPage, function (req, res) {
+        res.setTimeout(0);
         if(!req.files.images) { return res.send(400); }
         var files = req.files.images[0] ? req.files.images : [req.files.images];
 
@@ -77,7 +80,7 @@ module.exports = function (app) {
         }
 
         var page = req.page;
-        moveFiles(page, files, "images", function (err, images) {
+        moveFiles(page, files, 'images', function (err, images) {
             if (err) {
                 console.error(err);
                 return res.send(400);
@@ -85,6 +88,7 @@ module.exports = function (app) {
 
             page.images = page.images.concat(images);
             page.save(function (err) {
+                console.log(page);
                 if (err) {
                     console.error(err);
                     return res.send(500);
@@ -96,10 +100,10 @@ module.exports = function (app) {
                     lastModified: page.lastModified.getTime()
                 });
             });
-        });
+        }); 
     });
 
-    app.delete("/attachments", loadPage, function (req, res) {
+    app.delete('/attachments', loadPage, function (req, res) {
         var removedFile = null;
         var page = req.page;
         page.attachments = page.attachments.filter(function (attachment) {
@@ -113,7 +117,8 @@ module.exports = function (app) {
         if (removedFile) {
             return page.save(function(err) {
                 if(err) {console.error(err); return 500; }
-                fs.unlink(path.join(__dirname, "..", "public", "attachments", page.id, removedFile), function(err) {
+                fs.unlink(path.join(__dirname, '..', 'public', 'attachments', page.id, removedFile), function(err) {
+                    if(err) {console.error(err); return 500; }
                     res.send(200, {
                         lastModified: page.lastModified.getTime()
                     });
@@ -123,7 +128,7 @@ module.exports = function (app) {
         res.send(404);
     });
 
-    app.delete("/images", loadPage, function (req, res) {
+    app.delete('/images', loadPage, function (req, res) {
         var removedFile = null;
         var page = req.page;
         page.images = page.images.filter(function (image) {
@@ -138,7 +143,8 @@ module.exports = function (app) {
         if (removedFile) {
             return page.save(function(err) {
                 if(err) {console.error(err); return 500; }
-                fs.unlink(path.join(__dirname, "..", "public", "images", page.id, removedFile), function(err) {
+                fs.unlink(path.join(__dirname, '..', 'public', 'images', page.id, removedFile), function(err) {
+                    if(err) {console.error(err); return 500; }
                     res.send(200, {
                         lastModified: page.lastModified.getTime()
                     });
@@ -154,11 +160,11 @@ module.exports = function (app) {
         request.head(req.query.uri, function(err, data) {
             if (err) return res.send(401);
 
-            if(data && data.headers && data.headers["content-type"]) {
-                return res.send(data.headers["content-type"]);
+            if(data && data.headers && data.headers['content-type']) {
+                return res.send(data.headers['content-type']);
             }
 
-            res.send("unknown/type");
+            res.send('unknown/type');
         });
     });
 };

@@ -1,16 +1,18 @@
+/*jslint node: true */
 "use strict";
 
 var ProgressBar = require("./progress-bar");
+var message = require("./message");
 var Dropzone = require("./dropzone");
 var handleErrors = require("./handle-xhr-errors");
 var __ = require("./translate");
 var injectMedia = require("./inject-media");
 
-if ($("#content.editable").length == 0) return;
+if ($("#content.editable").length === 0) return;
 
 $(function () {
     if (!(window.File && window.FileReader && window.FileList && window.Blob)) {
-        console.log('Drop zone hidden')
+        console.log('Drop zone hidden');
         return $(".drop-here").hide();
     }
 
@@ -68,8 +70,7 @@ var handleResponse = function (res) {
     var response = JSON.parse(res);
     response.images.forEach(function (image) {
         targetElement.append("<img class='polaroid' src='/images/" + response.pageId + "/" + image + "'/>");
-        $('#images')
-            .append("<li><a href='/images/" + response.pageId + "/" + image + "' title='" + image + "'><i class='icon-file'></i>" + image + "</a><a href='#' class='icon-remove-sign'</li>");
+        $('#images').append("<li><a href='/images/" + response.pageId + "/" + image + "' title='" + image + "'><i class='icon-file'></i>" + image + "</a><a href='#' class='icon-remove-sign'</li>");
     });
     $("h1:first").data().lastModified = response.lastModified;
     $("body").trigger("save");

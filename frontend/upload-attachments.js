@@ -50,7 +50,7 @@ function uploadFiles(url, files) {
     };
 
 
-    var progressBar = new ProgressBar('#attachments', xhr.upload);
+    var progressBar = new ProgressBar('#content', xhr.upload);
 
     xhr.send(formData); // multipart/form-data
 }
@@ -60,7 +60,6 @@ var handleResponse = function (res) {
     response.attachments.forEach(function (attachment) {
         var attachmentUrl = '/attachments/' + response.pageId + '/' + attachment;
         injectMedia(window.location.origin + attachmentUrl, '#content');
-        //$('#content').append("<a href='" + attachmentUrl + "' title='" + attachment + "'><i class='icon-file'></i>" + attachment + "</a>");
     });
     $("h1:first").data().lastModified = response.lastModified;
 };

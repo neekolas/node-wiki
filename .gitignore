@@ -28,3 +28,5 @@ uploads
 .tern-port
 
 public/javascripts/app.js
+
+config/production.js

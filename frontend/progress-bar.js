@@ -1,3 +1,4 @@
+/*jslint node: true */
 "use strict";
 
 var ProgressBar = function (target, upload) {

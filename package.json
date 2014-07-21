@@ -1,7 +1,7 @@
 {
   "name": "uhuru-wiki",
   "description": "HTML5 editor powered wiki with drag and drop file upload and easy page creation",
-  "version": "0.1.0",
+  "version": "0.1.0-21",
   "scripts": {
     "start": "node .",
     "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha"
@@ -16,15 +16,15 @@
     "mongoose": "3.6.x",
     "express-mongoose": "0.1.x",
     "async": "*",
-    "mkdirp": "0.3.x",
-    "request": "2.21.x",
+    "mkdirp": "0.5.x",
+    "request": "2.37.x",
     "validator": "git://github.com/thomaspeklak/node-validator.git",
     "mongoose-version": "0.2.2",
     "i18n-2": "0.4.x",
     "mongoose-text-search": "0.0.2",
-    "semver": "~1.1.4",
-    "browserify": "~2.17.3",
-    "hbsfy": "~0.1.2",
+    "semver": "~2.3.1",
+    "browserify": "~4.2.1",
+    "hbsfy": "~1.3.2",
     "markdown": "~0.4.0"
   },
   "devDependencies": {
@@ -35,5 +35,9 @@
     "watchify": "0.0.1",
     "handlebars-runtime": "~1.0.12"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "subdomain": "uhuru-wiki",
+  "engines": {
+    "node": "0.10.x"
+  }
 }

@@ -5,6 +5,7 @@ body {
     background-image: url('/images/sandpaper.png'); 
     background-color: #f8f7ed;
     color: #523A53;
+    padding-bottom: 50px;
 }
 
 a {

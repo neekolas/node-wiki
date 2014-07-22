@@ -158,6 +158,8 @@ module.exports = function (app) {
         if(!req.query.uri) return res.send(400);
 
         request.head(req.query.uri, function(err, data) {
+            console.log(data);
+            console.log(err);
             if (err) return res.send(401);
 
             if(data && data.headers && data.headers['content-type']) {

@@ -19,14 +19,15 @@ app.configure(function () {
     app.use(express.bodyParser({
         uploadDir: __dirname + "/uploads"
     }));
-    app.use(express.cookieParser());
     app.use(express.methodOverride());
+    app.use(express.static(__dirname + "/public"));
+    app.use(express.cookieParser());
 
     I18n.expressBind(app, {
         locales: config.locales
     });
 
-    app.use(express.static(__dirname + "/public"));
+    
 });
 
 app.configure("development", function () {

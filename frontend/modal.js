@@ -1,3 +1,4 @@
+/*jslint node: true */
 "use strict";
 
 var modalTemplate = require("./templates/modal.hbs");

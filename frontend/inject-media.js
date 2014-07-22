@@ -1,3 +1,4 @@
+/*jslint node: true */
 "use strict";
 
 var __ = require("./translate");
@@ -86,7 +87,7 @@ var strategies = {
 var inject = function (targetElement) {
     return function (htmlFragment) {
         if ($(targetElement).is(":focus")) {
-            pasteHtmlAtCaret(htmlFragment)
+            pasteHtmlAtCaret(htmlFragment);
         } else {
             $(targetElement).append(htmlFragment);
         }

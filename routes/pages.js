@@ -5,6 +5,9 @@ var Page = require("../models/page");
 var setProps = require("../lib/set-props");
 
 var setPage = function (req, res) {
+    if (!req.cookies.username) {
+        return res.send(400, 'You must give a name');
+    }
     var page = res.locals.page;
 
     if (page) {
@@ -120,6 +123,9 @@ module.exports = function (app) {
         }
 
         var page = setPage(req, res);
+        if (!page) {
+            return false
+        }
         page.lastModified = new Date();
 
         page.save(function (err) {

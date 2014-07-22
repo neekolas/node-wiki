@@ -1,7 +1,7 @@
 {
   "name": "uhuru-wiki",
   "description": "HTML5 editor powered wiki with drag and drop file upload and easy page creation",
-  "version": "0.1.0-21",
+  "version": "0.1.0-25",
   "scripts": {
     "start": "node .",
     "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha"

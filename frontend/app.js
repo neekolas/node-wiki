@@ -9,7 +9,7 @@ if (!isDeleted) {
     require("./paste-media")(document.getElementById("content"));
     require("./medium-editor");
     require("./editor-initialize")();
-    require("./upload-attachments");
+    //require("./upload-attachments");
     require("./upload-images");
     require("./delete-image");
 }

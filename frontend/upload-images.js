@@ -21,6 +21,11 @@ $(function () {
         element: document.getElementById("content").parentNode,
         handleFileSelect: handleDrop
     });
+
+    new Dropzone({
+        element: document.getElementById("drop-zone"),
+        handleFileSelect: handleDrop
+    });
 });
 
 function handleDrop(evt) {
@@ -29,13 +34,14 @@ function handleDrop(evt) {
 
     $("body").trigger("save");
 
+    var target = document.getElementById("content");
     var uri = evt.dataTransfer.getData("text/uri-list");
     if (uri && !uri.match('^file:\/\//')) {
         console.log('File detected')
-        return injectMedia(uri, evt.target);
+        return injectMedia(uri, target);
     }
 
-    uploadFiles(document.location.href, evt.dataTransfer.files, evt.target);
+    uploadFiles(document.location.href, evt.dataTransfer.files, target);
 }
 
 function uploadFiles(url, files, targetElement) {

@@ -20,7 +20,7 @@ var setPage = function (req, res) {
         page = new Page(req.body);
         page.path = req.path;
     }
-    page.modified = page.lastModified || new Date();
+    page.lastModified = page.lastModified || new Date();
     page.modifiedBy = req.cookies.username || "";
     return page;
 };

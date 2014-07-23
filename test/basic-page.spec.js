@@ -39,6 +39,7 @@ describe("Page", function () {
     it("should create a new page", function (done) {
         var newPage = pageFactory();
         request(app)
+            .set("Cookie", "username=test")
             .post("/foobar")
             .expect(200)
             .send(newPage)
@@ -79,6 +80,7 @@ describe("Page", function () {
     it("should update an existing page", function (done) {
         var newPage = pageFactory();
         request(app)
+            .set("Cookie", "username=test")
             .post("/foobar")
             .expect(200)
             .send(newPage)

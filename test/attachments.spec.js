@@ -37,6 +37,7 @@ describe("Uploads", function () {
         request(app)
             .post("/attachments")
             .set("Referer", "/foobar")
+            .set("Cookie", "username=test")
             .attach("attachments", path.join(__dirname, "attachments/noimg.png"))
             .expect(200)
             .end(function (err, res) {
@@ -57,6 +58,7 @@ describe("Uploads", function () {
         request(app)
             .post("/attachments")
             .set("Referer", "/foobar")
+            .set("Cookie", "username=test")
             .attach("attachments", __filename)
             .expect(415)
             .end(done);
@@ -66,6 +68,7 @@ describe("Uploads", function () {
         request(app)
             .post("/images")
             .set("Referer", "/foobar")
+            .set("Cookie", "username=test")
             .attach("images", path.join(__dirname, "attachments/noimg.png"))
             .expect(200)
             .end(function (err, res) {
@@ -86,6 +89,7 @@ describe("Uploads", function () {
         request(app)
             .post("/images")
             .set("Referer", "/foobar")
+            .set("Cookie", "username=test")
             .attach("images", __filename)
             .expect(415)
             .end(done);
@@ -95,6 +99,7 @@ describe("Uploads", function () {
         request(app)
             .post("/attachments")
             .set("Referer", "/foobar")
+            .set("Cookie", "username=test")
             .attach("attachments", path.join(__dirname, "attachments/noimg.png"))
             .expect(200)
             .end(function (err) {
@@ -124,6 +129,7 @@ describe("Uploads", function () {
         request(app)
             .post("/images")
             .set("Referer", "/foobar")
+            .set("Cookie", "username=nick")
             .attach("images", path.join(__dirname, "attachments/noimg.png"))
             .expect(200)
             .end(function (err) {

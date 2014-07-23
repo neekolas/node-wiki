@@ -34,7 +34,7 @@ module.exports = function (app) {
 
     app.post('/attachments', loadPage, function (req, res) {
         res.setTimeout(0);
-        if(!req.files.attachments) { return res.send(400); }
+        if(!req.files.attachments || !req.cookies.username) { return res.send(400); }
         var files = req.files.attachments[0] ? req.files.attachments : [req.files.attachments];
 
         var unsupportedMedia = files.some(function (file) {
@@ -68,7 +68,7 @@ module.exports = function (app) {
 
     app.post('/images', loadPage, function (req, res) {
         res.setTimeout(0);
-        if(!req.files.images) { return res.send(400); }
+        if(!req.files.images || !req.cookies.username) { return res.send(400); }
         var files = req.files.images[0] ? req.files.images : [req.files.images];
 
         var unsupportedImageType = files.some(function (file) {

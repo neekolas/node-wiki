@@ -67,7 +67,7 @@ module.exports = function () {
     var saved = function (data) {
         message('success', __('page-saved'), 2e3);
         $('.modified-by strong')
-            .text(cookies.read('username'));
+            .text(cookies.read('username') + ' ');
         $('h1:first').data().lastModified = data.lastModified;
     };
     var savingError = function (xhr, error, type) {

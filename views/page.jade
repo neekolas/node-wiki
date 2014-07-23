@@ -9,7 +9,16 @@ block content
     if(page.modifiedBy)
         .modified-by
             mixin versionLink(page)
-            strong= page.modifiedBy
+            strong= page.modifiedBy +' '
+            a.dropdown-toggle(href="#", data-toggle="dropdown")
+                    span.glyphicon.glyphicon-cog.actions
+                ul.dropdown-menu.modify
+                    if (!page.deleted)
+                        li: a#move-page(href="#")= __("move-page")
+                    if (page.deleted)
+                        li: a#restore-page(href="#")= __("restore-page")
+                    else
+                        li: a#delete-page(href="#")= __("delete-page")    
 
 block pagemeta
     mixin fileDropper

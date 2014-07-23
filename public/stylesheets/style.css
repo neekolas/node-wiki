@@ -120,6 +120,29 @@ iframe {
     padding: 0;
     margin: 0;
 }
+
+.nav > li > a {
+    padding: 10px 15px;
+}
+
+.navbar-nav .add-page {
+    position: absolute;
+    right: 10px;
+}
+
+.add-page a#new-page {
+    font-size: 2.2em;
+    padding: 5px 5px 0 0;  
+}
+
+.glyphicon.glyphicon-cog.actions {
+    font-size: 0.75em;
+    top: 2px;
+}
+.dropdown-menu.modify {
+    left: 90%;
+}
+
 .title {
     margin-top: 30px;
 }

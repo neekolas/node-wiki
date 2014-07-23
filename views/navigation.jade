@@ -3,6 +3,13 @@ mixin navigation
 		.navbar-header
 			a.navbar-brand(href="/")= siteName
 		ul.nav.navbar-nav
+			each page in recentChanges
+				li
+					a(href=page.path)= page.title
+			li.add-page
+				a#new-page(href="#")= '+'
+
+		//-
 			li.dropdown
 				a.dropdown-toggle(href="#", data-toggle="dropdown")
 					= __("pages")

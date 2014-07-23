@@ -251,7 +251,7 @@ iframe {
         content: "/";
         padding-left: 10px;
     }
-    .navbar-nav > li.add-page > a:after {
+    .navbar-nav > li.add-page > a:after, .navbar-nav > li:nth-last-child(2) > a:after {
         content: "";
     }
     #drop-zone {

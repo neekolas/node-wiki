@@ -230,3 +230,31 @@ iframe {
 .gist{
     max-width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    .navbar-nav .add-page { 
+        top: 0;
+    }
+    .nav > li {
+        display: inline-block;
+    }
+    .nav > li > a {
+        padding: 0 0 0 10px;
+    }
+    .navbar {
+        margin-bottom: 0;
+    }
+    .navbar-nav {
+        margin: 10px;
+    }
+    .navbar-nav > li > a:after {
+        content: "/";
+        padding-left: 10px;
+    }
+    .navbar-nav > li.add-page > a:after {
+        content: "";
+    }
+    #drop-zone {
+        display: none;
+    }
+}

@@ -254,6 +254,10 @@ iframe {
     .navbar-nav > li.add-page > a:after, .navbar-nav > li:nth-last-child(2) > a:after {
         content: "";
     }
+
+    .navbar-nav > li.add-page > a:after {
+        padding-left: 0;
+    }
     #drop-zone {
         display: none;
     }

@@ -65,7 +65,7 @@ function uploadFiles(url, files, targetElement) {
     };
 
 
-    var progressBar = new ProgressBar("#content", xhr.upload);
+    var progressBar = new ProgressBar(".container", xhr.upload);
 
     xhr.send(formData); // multipart/form-data
 }

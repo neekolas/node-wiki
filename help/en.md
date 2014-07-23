@@ -1,12 +1,8 @@
 #Usage Guide
 
-##Create new page
-
-Type an url that has not been used yet
-
 ##Save a page
 
-Node Wiki automatically saves your changes if you:
+Uhuru Wiki automatically saves your changes if you:
 
 - are inactive for 2 seconds
 - move the focus out of a editable area
@@ -39,10 +35,6 @@ __Drop a ...__
 - __audio__ link to create an audio element
 - __video__ link to create a video element
 - __slideshare__ link to embed a slideshare presentation
-
-##Internal Linking
-
-To link to another wiki page you can simply use the normal link functionality of the editor, select _Wiki link_ and choose a page from the select box. The links are shown with title an path divided by a pipe ("|") and sorted by path.
 
 ##Versions
 

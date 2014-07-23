@@ -123,7 +123,7 @@ module.exports = function (uri, targetElement) {
             if (strategies[type]) {
                 strategies[type](uri, localInject);
             } else {
-                message("warn", __("unsupported-drop"));
+                console.log('Unsupported media type')
             }
         });
 };

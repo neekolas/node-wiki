@@ -5,6 +5,7 @@ var cookies = require('./cookies');
 var __ = require('./translate');
 var modal = require('./modal');
 var message = require('./message');
+var identify = require('./identify-user');
 var MediumEditor = require('./medium-editor');
 
 module.exports = function () {
@@ -36,6 +37,7 @@ module.exports = function () {
         });
 
         if (changed) {
+            if (!identify(save)) return
             data = newData;
             $.post(document.location.href, {
                     content: $('.content.editable').html(),

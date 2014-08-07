@@ -12,6 +12,6 @@ module.exports = function (opts) {
     var options = $.extend({}, defaults, opts);
 
     return $(modalTemplate(options))
-        .appendTo("body")
+        .prependTo("body")
         .modal("show");
 };

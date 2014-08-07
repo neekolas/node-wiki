@@ -7,20 +7,6 @@ var Dropzone = require("./dropzone");
 var handleErrors = require("./handle-xhr-errors");
 var injectMedia = require("./inject-media");
 
-if ($(".drop-here").length == 0) return;
-
-$(function () {
-    if (!(window.File && window.FileReader && window.FileList && window.Blob)) {
-        return $('.drop-here').hide();
-    }
-
-    // Setup the dnd listeners.
-    new Dropzone({
-        element: document.getElementById('drop-zone'),
-        handleFileSelect: handleFileSelect
-    });
-});
-
 function handleFileSelect(evt) {
     evt.stopPropagation();
     evt.preventDefault();

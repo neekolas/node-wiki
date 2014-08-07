@@ -3,9 +3,18 @@ mixin navigation
 		.navbar-header
 			a.navbar-brand(href="/")= siteName
 		ul.nav.navbar-nav
-			each page in recentChanges
-				li
-					a(href=page.path)= page.title
+			each page, i in recentChanges
+				if (i < 6)
+					li: a(href=page.path)= page.title
+			if (recentChanges.length >= 6)
+				li.dropdown
+					a.dropdown-toggle(href="#", data-toggle="dropdown")
+						= 'More'
+						b.caret
+					ul.dropdown-menu
+						each page, i in recentChanges
+							if (i >= 6)
+								li: a(href=page.path)= page.title
 			li.add-page
 				a#new-page(href="#")= '+'
 

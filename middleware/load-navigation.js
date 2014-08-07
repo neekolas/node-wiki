@@ -13,7 +13,7 @@ var subNodes = function (req, res, cb) {
 };
 
 var recentChanges = function (req, res, cb) {
-    Page.recentChanges(10, function (err, pages) {
+    Page.recentChanges(20, function (err, pages) {
         if (!err) {res.locals.recentChanges = pages; }
 
         cb(err);
@@ -21,7 +21,7 @@ var recentChanges = function (req, res, cb) {
 };
 
 var latestPages = function (req, res, cb) {
-    Page.latest(10, function (err, pages) {
+    Page.latest(20, function (err, pages) {
         if (!err) {res.locals.latest = pages; }
 
         cb(err);

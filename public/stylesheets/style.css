@@ -262,3 +262,9 @@ iframe {
         display: none;
     }
 }
+td:first-child {
+    font-size: 1em;
+}
+td {
+    font-size: 0.75em;
+}

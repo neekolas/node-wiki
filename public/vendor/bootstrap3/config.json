@@ -8,7 +8,7 @@
     "@brand-primary": "#c7372d",
     "@brand-success": "#c7372d",
     "@brand-info": "#5bc0de",
-    "@brand-warning": "#f0ad4e",
+    "@brand-warning": "#c7372d",
     "@brand-danger": "#d9534f",
     "@body-bg": "#f8f7ed",
     "@text-color": "#641D1D",
@@ -419,5 +419,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=cde9400b20277a8c31a8"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=812cd0f12f43d7f4e720"
 }

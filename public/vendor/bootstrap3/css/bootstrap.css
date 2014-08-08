@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=cde9400b20277a8c31a8)
- * Config saved to config.json and https://gist.github.com/cde9400b20277a8c31a8
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=812cd0f12f43d7f4e720)
+ * Config saved to config.json and https://gist.github.com/812cd0f12f43d7f4e720
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -2928,8 +2928,8 @@ fieldset[disabled] .btn-info.active {
 }
 .btn-warning {
   color: #ffffff;
-  background-color: #f0ad4e;
-  border-color: #eea236;
+  background-color: #c7372d;
+  border-color: #b23128;
 }
 .btn-warning:hover,
 .btn-warning:focus,
@@ -2937,8 +2937,8 @@ fieldset[disabled] .btn-info.active {
 .btn-warning.active,
 .open > .dropdown-toggle.btn-warning {
   color: #ffffff;
-  background-color: #ec971f;
-  border-color: #d58512;
+  background-color: #9d2c24;
+  border-color: #80231d;
 }
 .btn-warning:active,
 .btn-warning.active,
@@ -2960,11 +2960,11 @@ fieldset[disabled] .btn-warning:active,
 .btn-warning.disabled.active,
 .btn-warning[disabled].active,
 fieldset[disabled] .btn-warning.active {
-  background-color: #f0ad4e;
-  border-color: #eea236;
+  background-color: #c7372d;
+  border-color: #b23128;
 }
 .btn-warning .badge {
-  color: #f0ad4e;
+  color: #c7372d;
   background-color: #ffffff;
 }
 .btn-danger {
@@ -4481,11 +4481,11 @@ a.label:focus {
   background-color: #31b0d5;
 }
 .label-warning {
-  background-color: #f0ad4e;
+  background-color: #c7372d;
 }
 .label-warning[href]:hover,
 .label-warning[href]:focus {
-  background-color: #ec971f;
+  background-color: #9d2c24;
 }
 .label-danger {
   background-color: #d9534f;
@@ -4753,7 +4753,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-warning {
-  background-color: #f0ad4e;
+  background-color: #c7372d;
 }
 .progress-striped .progress-bar-warning {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);

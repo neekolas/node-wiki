@@ -1,6 +1,6 @@
 body {
     font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Sans Serif';
-    font-weight: 300;
+    font-weight: 100;
     font-size: 18px;
     letter-spacing: 0.2px;
     background: url('/static-images/sandpaper-red.jpg');
@@ -18,7 +18,8 @@ a {
 
 h1, h2, h3, h4, .navbar-nav, .navbar a, #drop-zone {
     font-family: 'Josefin Slab', serif;
-} 
+    font-weight: 300;
+}
 
 .modal {
     color: #641d1d;

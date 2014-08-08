@@ -266,7 +266,7 @@ td:first-child {
     font-size: 1em;
     line-height: inherit;
 }
-td {
+td:nth-child(n+2) {
     font-size: 0.75em;
     line-height: 1;
 }

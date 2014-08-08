@@ -17,9 +17,10 @@ html
             }
         if (page.path == '/')
             style.
-                body { background-image: url('/static-images/bg-2.jpg'); color: #fff !important }
+                html { background: url('/static-images/bg-2.jpg') no-repeat center center fixed; color: #fff !important; background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; }
+                body { background-image: none;}
                 #content { margin-top: 40px;}
-                body a {color: #fff !important; }
+                body a {color: #fff; }
                 body a:hover { color: #c7372d !important}
                 h1.title { display: none; }
                 .radial-gradient { display: none; }

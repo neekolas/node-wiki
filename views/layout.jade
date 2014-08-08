@@ -15,14 +15,25 @@ html
             .tags:after {
                 content: "#{__("tags-description")}";
             }
+        if (page.path == '/')
+            style.
+                html { background: url('/static-images/bg-2.jpg') no-repeat center center fixed; color: #fff !important; background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; }
+                body { background-image: none;}
+                #content { margin: 40px 0;}
+                body a {color: #fff; }
+                body a:hover { color: #c7372d !important}
+                h1.title { display: none; }
+                .radial-gradient { display: none; }
         script(type='text/javascript', src='/vendor/sprintf.min.js')
         script(type='text/javascript', src='/javascripts/locale.js')
         script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
         script.
             window.jQuery || document.write('<script src="/vendor/jquery-1.7.1.min.js"><\/script>')
         script(type='text/javascript', src='/vendor/bootstrap3/js/bootstrap.js')
+        
 
     body
+        div.radial-gradient
         mixin navigation
         .container(class=page && page.deleted ? "deleted" : "")
             block main

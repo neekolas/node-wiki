@@ -5,10 +5,12 @@ block main
     if page && page.deleted
         .alert.alert-warning= __("page-status-deleted")
     .row
-        .col-md-10
-            block content
+        if (page.path !== '/')
+            .col-md-10
+                block content
 
-        .col-md-2
-            block pagemeta
-            //block navigation
-            //    mixin renderNavigation(navigation)
+            .col-md-2
+                block pagemeta
+        else
+            .col-md-12
+                block content

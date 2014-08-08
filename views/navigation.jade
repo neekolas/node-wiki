@@ -1,19 +1,19 @@
 mixin navigation
 	.navbar.navbar-static-top
 		.navbar-header
-			a.navbar-brand(href="/")= siteName
+			a.navbar-brand(href="/")
 		ul.nav.navbar-nav
 			each page, i in recentChanges
-				if (i < 6 && !page.deleted && page.path.length > 2)
+				if (i < 7 && !page.deleted && page.path.length > 2)
 					li: a(href=page.path)= page.title
-			if (recentChanges.length > 6)
+			if (recentChanges.length > 7)
 				li.dropdown
 					a.dropdown-toggle(href="#", data-toggle="dropdown")
 						= 'More'
 						b.caret
 					ul.dropdown-menu
 						each page, i in recentChanges
-							if (i >= 6 && !page.deleted && page.path.length > 3)
+							if (i >= 7 && !page.deleted && page.path.length > 3)
 								li: a(href=page.path)= page.title
 			li.add-page
 				a#new-page(href="#")= '+'

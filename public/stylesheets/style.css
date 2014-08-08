@@ -262,11 +262,11 @@ iframe {
         display: none;
     }
 }
-td:first-child {
+.table > tbody > tr > td:first-child {
     font-size: 1em;
     line-height: inherit;
 }
-td:nth-child(n+2) {
+.table > tbody > tr > td:nth-child(n+2) {
     font-size: 0.75em;
     line-height: 1;
 }

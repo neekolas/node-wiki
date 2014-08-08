@@ -4,7 +4,7 @@ mixin navigation
 			a.navbar-brand(href="/")= siteName
 		ul.nav.navbar-nav
 			each page, i in recentChanges
-				if (i < 6 && !page.deleted)
+				if (i < 6 && !page.deleted && page.path.length > 2)
 					li: a(href=page.path)= page.title
 			if (recentChanges.length > 6)
 				li.dropdown
@@ -13,7 +13,7 @@ mixin navigation
 						b.caret
 					ul.dropdown-menu
 						each page, i in recentChanges
-							if (i >= 6 && !page.deleted)
+							if (i >= 6 && !page.deleted && page.path.length > 3)
 								li: a(href=page.path)= page.title
 			li.add-page
 				a#new-page(href="#")= '+'

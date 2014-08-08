@@ -264,7 +264,9 @@ iframe {
 }
 td:first-child {
     font-size: 1em;
+    line-height: inherit;
 }
 td {
     font-size: 0.75em;
+    line-height: 1;
 }

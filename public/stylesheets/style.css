@@ -2,7 +2,7 @@ body {
     font-family: 'Josefin Slab', 'Helvetica Neue', 'Helvetica', 'Sans Serif';
     font-weight: 300;
     font-size: 18px;
-    background-image: url('/images/sandpaper.png'); 
+    background-image: url('/static-images/sandpaper.png'); 
     background-color: #f8f7ed;
     color: #772C2C;
     padding-bottom: 75px;

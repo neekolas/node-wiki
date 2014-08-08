@@ -335,7 +335,7 @@ iframe {
   30%   { opacity: 0.5; }
   100% { opacity: 1; transform: scale(1); }
 }
-img.centered.polaroid { left: 0; right: 0; display: block; margin: auto; width: 50%; -webkit-animation: fadeIn 0.9s 1 both; animation: fadeIn 0.9s 1 both; }
+img.centered.polaroid { left: 0; right: 0; display: block; margin: auto; width: 50%; -webkit-animation: fadeIn 0.9s 0.5s 1 both; animation: fadeIn 0.9s 1 both; }
 
 .table > tbody > tr > td:first-child {
     font-size: 1em;

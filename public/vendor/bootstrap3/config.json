@@ -11,7 +11,7 @@
     "@brand-warning": "#f0ad4e",
     "@brand-danger": "#d9534f",
     "@body-bg": "#f8f7ed",
-    "@text-color": "#785B7A",
+    "@text-color": "#641D1D",
     "@link-color": "#7c211a",
     "@link-hover-color": "@brand-primary",
     "@font-family-sans-serif": "\"Josefin Slab\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
@@ -419,5 +419,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=c486a82a840952eb9514"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=cde9400b20277a8c31a8"
 }

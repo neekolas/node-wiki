@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=c486a82a840952eb9514)
- * Config saved to config.json and https://gist.github.com/c486a82a840952eb9514
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=cde9400b20277a8c31a8)
+ * Config saved to config.json and https://gist.github.com/cde9400b20277a8c31a8
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -894,7 +894,7 @@ body {
   font-family: "Josefin Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 17px;
   line-height: 1.42857143;
-  color: #785b7a;
+  color: #641d1d;
   background-color: #f8f7ed;
 }
 input,
@@ -2628,7 +2628,7 @@ select[multiple].input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #b59eb7;
+  color: #c63a3a;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -4595,7 +4595,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #785b7a;
+  color: #641d1d;
 }
 .alert {
   padding: 15px;

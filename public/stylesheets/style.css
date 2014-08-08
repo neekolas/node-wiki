@@ -47,12 +47,13 @@ iframe {
 .alert {
     padding: 10px;
 }
-.table > tbody > tr > th {
-    border-top: 0;
+
+.table > thead > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-top: 1px solid rgba(150,150,150,0.2);
 }
 
-.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
-    border-top: 1px solid rgba(150,150,150,0.2);
+.table > tbody > tr > th {
+    border-top: 0;
 }
 .navbar-nav > li > .dropdown-menu {
     background-color: rgba(0, 0, 0, 0.2);

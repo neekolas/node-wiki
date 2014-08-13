@@ -116,6 +116,9 @@ iframe {
     cursor: pointer;
     text-decoration: underline;
 }
+.container {
+    position: relative;
+}
 .container.deleted {
     background: #fbfbfb;
 }
